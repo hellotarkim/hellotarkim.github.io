@@ -1,4 +1,8 @@
+# Setup
 title: Tar
 description: Tar Pages
+paginate: 1
 
-theme: jekyll-theme-slate
+# Gems
+gems:
+  - jekyll-paginate
