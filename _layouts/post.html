@@ -13,7 +13,7 @@ layout: default
     <span class="pagination-item newer">&middot</span>
   {% endif %}
   
-  <a class="pagination-item" href="{{ site.url }}">&middot</a>
+  <a class="pagination-item" href="{{ site.url }}">&middot{{ page.previous.title }}</a>
 
   {% if page.next.url %}
     <a class="pagination-item older" href="{{ page.next.url | prepend: site.baseurl }}">&middot</a>
