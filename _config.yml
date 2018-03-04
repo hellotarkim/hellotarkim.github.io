@@ -1,19 +1,17 @@
 # Setup
 title: Tar
 description: Tar Pages
-paginate: 1
-
 
 # defaults
 defaults:
-  -
-    scope:
-      path: "_posts" # 적용할 폴더를 입력
+  - scope:
+      path: "_posts" # 적용 할 폴더 지정
     values:
-      layout: "post" # layout의 기본값을 post로 지정
+      layout: "post" # layout 기본값을 post로 지정
       author: "Tar Kim"
-      permalink: /:title:hour::minute
+      permalink: /:title # permalink 형식 지정
       
-# Gems
+# paginate
+paginate: 1
 gems:
-  - jekyll-paginate # 페이지네이션을 위한 gem
+  - jekyll-paginate
