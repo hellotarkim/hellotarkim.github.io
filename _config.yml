@@ -3,16 +3,16 @@ title: Tar
 description: Tar Pages
 paginate: 1
 
+
 # defaults
 defaults:
   -
     scope:
-      path: "_posts" # 이 빈 문자열은 프로젝트 내의 모든 파일을 의미한다
+      path: "_posts" # 적용할 폴더를 입력
     values:
-      layout: "post"
+      layout: "post" # layout의 기본값을 post로 지정
       
       
-
 # Gems
 gems:
-  - jekyll-paginate
+  - jekyll-paginate # 페이지네이션을 위한 gem
