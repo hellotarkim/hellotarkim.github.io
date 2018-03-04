@@ -17,15 +17,17 @@ layout: default
 
 <div class="pagination">
   {% if paginator.previous_page %}
-    <a class="pagination-item newer" href="{{ paginator.previous_page_path | prepend: site.baseurl }}">Newer</a>
+    <a class="pagination-item newer" href="{{ paginator.previous_page_path | prepend: site.baseurl }}">&middot</a>
   {% else %}
-    <span class="pagination-item newer">Newer</span>
+    <span class="pagination-item newer">&middot</span>
   {% endif %}
   
+  <span class="pagination-item">&middot</span>
+  
   {% if paginator.next_page %}
-    <a class="pagination-item older" href="{{ paginator.next_page_path | prepend: site.baseurl }}">Older</a>
+    <a class="pagination-item older" href="{{ paginator.next_page_path | prepend: site.baseurl }}">&middot</a>
   {% else %}
-    <span class="pagination-item older">Older</span>
+    <span class="pagination-item older">&middot</span>
   {% endif %}
 </div>
 
