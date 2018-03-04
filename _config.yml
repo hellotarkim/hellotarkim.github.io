@@ -12,7 +12,7 @@ defaults:
     values:
       layout: "post" # layout의 기본값을 post로 지정
       author: "Tar Kim"
-      permalink: /:year/:title      
+      permalink: /:title:hour::minute
       
 # Gems
 gems:
