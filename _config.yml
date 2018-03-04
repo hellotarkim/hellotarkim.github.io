@@ -7,7 +7,7 @@ paginate: 1
 defaults:
   -
     scope:
-      path: "_post" # 이 빈 문자열은 프로젝트 내의 모든 파일을 의미한다
+      path: "_posts" # 이 빈 문자열은 프로젝트 내의 모든 파일을 의미한다
     values:
       layout: "post"
       
