@@ -11,6 +11,7 @@ defaults:
       path: "_posts" # 적용할 폴더를 입력
     values:
       layout: "post" # layout의 기본값을 post로 지정
+      author: "Tar Kim"
       
       
 # Gems
