@@ -12,7 +12,7 @@ defaults:
       permalink: /:title # permalink 형식 지정
       
 # paginate
-paginate: 1
+paginate: 3
 paginate_path: "/list:num/"
 gems:
   - jekyll-paginate
