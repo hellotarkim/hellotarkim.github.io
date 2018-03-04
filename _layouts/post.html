@@ -8,7 +8,7 @@ layout: default
 
 <div class="pagination">
   {% if page.previous.url %} 
-    <a class="pagination-item newer" href="{{ page.previous.url | prepend: site.baseurl }}">&middot 이전 내용{{ page.previous.excerpt }}이전 내용</a>
+    <a class="pagination-item newer" href="{{ page.previous.url | prepend: site.baseurl }}">&middot 이전 내용{{ page.previous.content | strip_html | truncatewords:30 }}이전 내용</a>
   {% else %}
     <span class="pagination-item newer">&middot</span>
   {% endif %}
@@ -16,7 +16,7 @@ layout: default
   <a class="pagination-item" href="{{ site.url }}">&middot{{ page.previous.title }}</a>
 
   {% if page.next.url %}
-    <a class="pagination-item older" href="{{ page.next.url | prepend: site.baseurl }}">&middot 이후 내용{{ page.next.excerpt }}이후 내용</a>
+    <a class="pagination-item older" href="{{ page.next.url | prepend: site.baseurl }}">&middot 이후 내용{{ page.next.content | strip_html | truncatewords:30 }}이후 내용</a>
   {% else %}
     <span class="pagination-item older">&middot</span>
   {% endif %}
