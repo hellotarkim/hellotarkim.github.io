@@ -30,17 +30,3 @@ layout: default
     <span class="pagination-item older">&middot</span>
   {% endif %}
 </div>
-
-  <div class="pagination">
-    {% if page.previous.url %} 
-      <a class="pagination-item newer" href="{{ page.previous.url | prepend: site.baseurl }}">
-        <span>&laquo;&nbsp;{{ page.previous.title }}</span>
-      </a>
-    {% endif %} 
-    
-    {% if page.next.url %}  
-      <a class="pagination-item older" href="{{ page.next.url | prepend: site.baseurl }}">
-        <span>{{ page.next.title }}&nbsp;&raquo;</span>
-      </a>
-    {% endif %} 
-  </div>
