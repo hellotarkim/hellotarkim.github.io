@@ -16,26 +16,28 @@ layout: default
 </div>
 
 <div class="pagination">
-  {% if paginator.next_page %}
-    <a class="pagination-item older" href="{{ paginator.next_page_path | prepend: site.baseurl }}">Older</a>
-  {% else %}
-    <span class="pagination-item older">Older</span>
-  {% endif %}
   {% if paginator.previous_page %}
     <a class="pagination-item newer" href="{{ paginator.previous_page_path | prepend: site.baseurl }}">Newer</a>
   {% else %}
     <span class="pagination-item newer">Newer</span>
   {% endif %}
+  
+  {% if paginator.next_page %}
+    <a class="pagination-item older" href="{{ paginator.next_page_path | prepend: site.baseurl }}">Older</a>
+  {% else %}
+    <span class="pagination-item older">Older</span>
+  {% endif %}
 </div>
 
   <div class="pagination">
     {% if page.previous.url %} 
-      <a class="prev" href="{{ page.previous.url | prepend: site.baseurl }}">
+      <a class="pagination-item newer" href="{{ page.previous.url | prepend: site.baseurl }}">
         <span>&laquo;&nbsp;{{ page.previous.title }}</span>
       </a>
-    {% endif %}  
+    {% endif %} 
+    
     {% if page.next.url %}  
-      <a class="next" href="{{ page.next.url | prepend: site.baseurl }}">
+      <a class="pagination-item older" href="{{ page.next.url | prepend: site.baseurl }}">
         <span>{{ page.next.title }}&nbsp;&raquo;</span>
       </a>
     {% endif %} 
