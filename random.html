@@ -1,21 +1,24 @@
 ---
-layout: none
+layout: default
 ---
 
 <html>
 <head>
-	<script type="text/javascript">
-		var posts = [];
-		{% for post in site.posts %}
-		posts.push("{{ post.url }}");
-		{% endfor %}
-
-		var url = posts[Math.floor(Math.random()*posts.length)];
-		window.location.replace(url);
+	<script>
+	var posts = [];
+	{% for post in site.posts %}
+	posts.push("{{ post.url }}");
+	{% endfor %}
+	 
+	var url = posts[Math.floor(Math.random()*posts.length)];
+	window.location.replace(url);
 	</script>
 </head>
 
 <body>
-
+	<noscript>
+	JavaScript is Required<br>
+	<a href="{{ site.url }}">...</a>
+	</noscript>
 </body>
 </html>
