@@ -8,17 +8,6 @@
     <meta name="description" content="{{ site.title | default: site.github.repository_name }} : {{ site.description | default: site.github.project_tagline }}">
 
     <link rel="stylesheet" type="text/css" media="screen" href="{{ '/style.css?v=' | append: site.github.build_revision | relative_url }}">
-
-	<script>
-	var posts = [];
-	{% for post in site.posts %}
-	posts.push("{{ post.url }}");
-	{% endfor %}
-	 
-	var url = posts[Math.floor(Math.random()*posts.length)];
-	window.location.replace(url);
-	</script>
-    
     
 {% seo %}
   </head>
