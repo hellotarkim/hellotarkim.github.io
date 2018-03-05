@@ -4,15 +4,26 @@ layout: none
 
 <html>
 <head>
-	<script>
+	<script type="text/javascript">
 		var posts = [];
 		{% for post in site.posts %}
 		posts.push("{{ post.url }}");
 		{% endfor %}
 
-		document.write("<meta http-equiv=\"refresh\" content=\"1;url=");
-		document.write(posts[Math.floor(Math.random() * posts.length)]);
-		document.write("\">");
+		var url = posts[Math.floor(Math.random()*posts.length)];
+
+		      if (typeof IE_fix != "undefined") {
+			document.write("Redirecting...");
+			var referLink = document.createElement("a");
+			referLink.href = url;
+			document.body.appendChild(referLink);
+			referLink.click();
+		      } else {
+			window.location.replace(url);
+		      }
+
+	
+	
 	</script>
 </head>
 
