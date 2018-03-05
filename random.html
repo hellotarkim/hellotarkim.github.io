@@ -11,26 +11,11 @@ layout: none
 		{% endfor %}
 
 		var url = posts[Math.floor(Math.random()*posts.length)];
-
-		      if (typeof IE_fix != "undefined") {
-			document.write("Redirecting...");
-			var referLink = document.createElement("a");
-			referLink.href = url;
-			document.body.appendChild(referLink);
-			referLink.click();
-		      } else {
-			window.location.replace(url);
-		      }
-
-	
-	
+		window.location.replace(url);
 	</script>
 </head>
 
 <body>
-	Redirecting to a
-	<script>
 
-	</script>
 </body>
 </html>
