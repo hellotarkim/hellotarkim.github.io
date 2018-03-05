@@ -6,22 +6,19 @@ layout: default
 <html>
 <head>
 	<script>
-		var posts = [];
-		{% for post in site.posts %}
-		posts.push("{{ post.url }}");
-		{% endfor %}
-		document.write("<meta http-equiv=\"refresh\" content=\"1;url=");
-		document.write(posts[Math.floor(Math.random() * posts.length)]);
-		document.write("\">");
+	var posts = [];
+	{% for post in site.posts %}
+	posts.push("{{ post.url }}");
+	{% endfor %}
+	 
+	var url = posts[Math.floor(Math.random()*posts.length)];
+	window.location.replace(url);
 	</script>
 </head>
 
 <body>
-	Redirecting to a
-	<script>
-		document.write("<a href=\"");
-		document.write(posts[Math.floor(Math.random() * posts.length)]);
-		document.write("\">selecting a post for you</a>");
-	</script>
+	<noscript>
+	<a href="{{ site.url }}">Required Script</a>
+	</noscript>
 </body>
 </html>
