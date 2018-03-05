@@ -16,7 +16,6 @@ layout: default
   {% endfor %}
 </div>
 
-<!--
 <div class="pagination">
   {% if paginator.previous_page %}
     <a class="pagination-item newer" href="{{ paginator.previous_page_path | prepend: site.baseurl }}">&middot</a>
@@ -24,7 +23,7 @@ layout: default
     <span class="pagination-item newer">&middot</span>
   {% endif %}
   
-  <span class="pagination-item">&middot</span>
+  <a  class="pagination-item" href="{{ site.baseurl }}/random.html">&middot</a>
   
   {% if paginator.next_page %}
     <a class="pagination-item older" href="{{ paginator.next_page_path | prepend: site.baseurl }}">&middot</a>
@@ -32,4 +31,3 @@ layout: default
     <span class="pagination-item older">&middot</span>
   {% endif %}
 </div>
--->
