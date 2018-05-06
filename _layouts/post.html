@@ -46,7 +46,7 @@ layout: default
   });
   
   $('.random').click(function(e) {
-    
+  e.preventDefault();
   var posts = [];
   {% for post in site.posts %}
   posts.push("{{ post.url }}");
