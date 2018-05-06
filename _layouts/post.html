@@ -43,12 +43,24 @@ layout: default
       
     });
   });
+
+  
+  
+  
   
   $('.random').click(function(e) {
-    e.preventDefault();
-    var $el = $(this);
-    var url = $(this).attr("href");    
-    $.get(url, function(newdata){
+
+  
+	var posts = [];
+	{% for post in site.posts %}
+	posts.push("{{ post.url }}");
+	{% endfor %}
+	
+      var $el = $(this);
+
+	var url = posts[Math.floor(Math.random()*posts.length)];
+   
+  $.get(url, function(newdata){
         var newposts = $(newdata).find(".posts");
         var newhref = $(newdata).find(".random").attr("href");
         if (newhref == null) {
@@ -60,7 +72,11 @@ layout: default
         }
       
     });
+   
+  
   });
+ 
+   
   
   $('.newer').click(function(e) {
     e.preventDefault();
