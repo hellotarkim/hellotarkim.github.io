@@ -1,10 +1,14 @@
 ---
 layout: default
 ---
-<div class="posts">
-  <h1 class="post-title">{{ page.title }}</h1>
-  
-  {{ content }}
+
+<div class="postsbox">
+  <div class="posts">
+    <h1 class="post-title">{{ page.title }}</h1>
+    {{ content }}
+  </div>
+</div>
+
 
 <div class="pagination">
   {% if page.previous.url %} 
@@ -21,5 +25,45 @@ layout: default
     <span class="pagination-item older">&middot</span>
   {% endif %}
 </div>
+
+<script>
+  $('.older').click(function(e) {
+    e.preventDefault();
+    var $el = $(this);
+    var url = $(this).attr("href");    
+    $.get(url, function(newdata){
+        var newposts = $(newdata).find(".posts");
+        var newhref = $(newdata).find(".older").attr("href");
+        if (newhref == null) {
+            $el.replaceWith( "<span>" + $el.html() + "</span>" );
+            $(".postsbox").append(newposts);
+        } else {
+            $el.attr("href", newhref);
+            $(".postsbox").append(newposts);
+        }
+      
+    });
+  });
   
-</div>
+  $('.newer').click(function(e) {
+    e.preventDefault();
+    var $el = $(this);
+    var url = $(this).attr("href");    
+    $.get(url, function(newdata){
+        var newposts = $(newdata).find(".posts");
+        var newhref = $(newdata).find(".newer").attr("href");
+        if (newhref == null) {
+            $el.replaceWith( "<span>" + $el.html() + "</span>" );
+            $(".postsbox").prepend(newposts);
+        } else {
+            $el.attr("href", newhref);
+            $(".postsbox").prepend(newposts);
+        }
+      
+    });
+  });
+</script>
+
+
+
+
