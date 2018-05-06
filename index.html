@@ -53,24 +53,6 @@ layout: default
     });
   });
   
-  $('.random').click(function(e) {
-    e.preventDefault();
-    var $el = $(this);
-    var url = $(this).attr("href");    
-    $.get(url, function(newdata){
-        var newposts = $(newdata).find(".posts");
-        var newhref = $(newdata).find(".random").attr("href");
-        if (newhref == null) {
-            $el.replaceWith( "<span>" + $el.html() + "</span>" );
-            $(".postsbox").append(newposts);
-        } else {
-            $el.attr("href", newhref);
-            $(".postsbox").append(newposts);
-        }
-      
-    });
-  });
-  
   $('.newer').click(function(e) {
     e.preventDefault();
     var $el = $(this);
