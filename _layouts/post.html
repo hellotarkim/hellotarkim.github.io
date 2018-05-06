@@ -4,9 +4,11 @@ layout: default
 
 <div class="postsbox">
   <div class="posts">
+    <h1 class="post-title">{{ page.title }}</h1>
     {{ content }}
   </div>
 </div>
+
 
 <div class="pagination">
   {% if page.previous.url %} 
@@ -15,7 +17,7 @@ layout: default
     <span class="pagination-item newer">&middot</span>
   {% endif %}
   
-  <a class="pagination-item random" href="{{ site.baseurl }}/random">&middot</a>
+  <a class="pagination-item" href="{{ site.baseurl }}/random">&middot</a>
 
   {% if page.next.url %}
     <a class="pagination-item older" href="{{ page.next.url | prepend: site.baseurl }}">&middot</a>
@@ -42,7 +44,7 @@ layout: default
       
     });
   });
-
+  
   $('.newer').click(function(e) {
     e.preventDefault();
     var $el = $(this);
