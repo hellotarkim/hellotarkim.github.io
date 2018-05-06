@@ -48,26 +48,16 @@ layout: default
   $('.random').click(function(e) {
     
   var posts = [];
-	{% for post in site.posts %}
-	posts.push("{{ post.url }}");
-	{% endfor %}
-	 
-	var url = posts[Math.floor(Math.random()*posts.length)];
+  {% for post in site.posts %}
+  posts.push("{{ post.url }}");
+  {% endfor %}	 
+  var url = posts[Math.floor(Math.random()*posts.length)];
 
-    e.preventDefault();
-    var $el = $(this);
-    var url = $(this).attr("href");    
+    //var $el = $(this);
+    //var url = $(this).attr("href");    
     $.get(url, function(newdata){
         var newposts = $(newdata).find(".posts");
-        var newhref = $(newdata).find(".older").attr("href");
-        if (newhref == null) {
-            $el.replaceWith( "<span>" + $el.html() + "</span>" );
-            $(".postsbox").append(newposts);
-        } else {
-            $el.attr("href", newhref);
-            $(".postsbox").append(newposts);
-        }
-      
+            $(".postsbox").append(newposts);  
     });
   });
   
