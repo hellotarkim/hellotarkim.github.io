@@ -9,7 +9,6 @@ layout: default
   </div>
 </div>
 
-
 <div class="pagination">
   {% if page.previous.url %} 
     <a class="pagination-item newer" href="{{ page.previous.url | prepend: site.baseurl }}">&middot</a>
@@ -40,42 +39,37 @@ layout: default
         } else {
             $el.attr("href", newhref);
             $(".postsbox").append(newposts);
-        }
-      
+        }    
     });
   });
-
-  
+ 
   $('.random').click(function(e) {
-  e.preventDefault();
-  var posts = [];
-  {% for post in site.posts %}
-  posts.push("{{ post.url }}");
-  {% endfor %}
-  
-  var url = posts[Math.floor(Math.random()*posts.length)];
-    $.get(url, function(newdata){
-      var newposts = $(newdata).find(".posts");
-      $(".postsbox").append(newposts);  
+    e.preventDefault();
+    var posts = [];
+    {% for post in site.posts %}
+    posts.push("{{ post.url }}");
+    {% endfor %}
+    var url = posts[Math.floor(Math.random()*posts.length)];
+      $.get(url, function(newdata){
+        var newposts = $(newdata).find(".posts");
+        $(".postsbox").append(newposts);  
     });
   });
   
-   
   $('.newer').click(function(e) {
     e.preventDefault();
     var $el = $(this);
     var url = $(this).attr("href");    
     $.get(url, function(newdata){
-        var newposts = $(newdata).find(".posts");
-        var newhref = $(newdata).find(".newer").attr("href");
-        if (newhref == null) {
-            $el.replaceWith( "<span>" + $el.html() + "</span>" );
-            $(".postsbox").prepend(newposts);
-        } else {
-            $el.attr("href", newhref);
-            $(".postsbox").prepend(newposts);
-        }
-      
+      var newposts = $(newdata).find(".posts");
+      var newhref = $(newdata).find(".newer").attr("href");
+      if (newhref == null) {
+        $el.replaceWith( "<span>" + $el.html() + "</span>" );
+        $(".postsbox").prepend(newposts);
+      } else {
+        $el.attr("href", newhref);
+        $(".postsbox").prepend(newposts);
+      }  
     });
   });
 </script>
