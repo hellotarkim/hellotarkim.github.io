@@ -2,7 +2,6 @@
 layout: default
 ---
 
-<!--
 <script>
 var posts = [];
 {% for post in site.posts %}
@@ -11,10 +10,8 @@ posts.push("{{ post.url }}");
 var url = posts[Math.floor(Math.random()*posts.length)];
 window.location.replace(url);
 </script>
--->
-<!--
+
 <noscript>
--->
 <div class="posts">
   {% for post in paginator.posts %}
   <div id="content-container">
@@ -40,6 +37,4 @@ window.location.replace(url);
     <span class="pagination-item older">&middot</span>
   {% endif %}
 </div> 
-<!--
 </noscript>
--->
