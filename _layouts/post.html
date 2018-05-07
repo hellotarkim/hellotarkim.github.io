@@ -44,23 +44,23 @@ layout: default
       
     });
   });
+
   
   $('.random').click(function(e) {
   e.preventDefault();
   var posts = [];
   {% for post in site.posts %}
   posts.push("{{ post.url }}");
-  {% endfor %}	 
+  {% endfor %}
+  
   var url = posts[Math.floor(Math.random()*posts.length)];
-
-    //var $el = $(this);
-    //var url = $(this).attr("href");    
     $.get(url, function(newdata){
-        var newposts = $(newdata).find(".posts");
-            $(".postsbox").append(newposts);  
+      var newposts = $(newdata).find(".posts");
+      $(".postsbox").append(newposts);  
     });
   });
   
+   
   $('.newer').click(function(e) {
     e.preventDefault();
     var $el = $(this);
@@ -79,7 +79,3 @@ layout: default
     });
   });
 </script>
-
-
-
-
