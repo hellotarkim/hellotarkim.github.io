@@ -11,12 +11,8 @@ var url = posts[Math.floor(Math.random()*posts.length)];
 window.location.replace(url);
 </script>
 
-<noscript>
 <div class="posts">
   {% for post in paginator.posts %}
-  <article class="post">
     {{ post.content }}
-  </article>
   {% endfor %}
 </div>
-</script>
