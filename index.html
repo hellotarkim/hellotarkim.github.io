@@ -21,11 +21,15 @@ window.location.replace(url);
 </div>
 
 <div class="postsbox">
-  <div class="posts">
-    {% for post in paginator.posts %}
+<div class="posts">
+  {% for post in paginator.posts %}
+  <div id="content-container">
+  <article class="post">
     {{ post.content }}
-    {% endfor %}
+  </article>
   </div>
+  {% endfor %}
+</div>
 </div>
 
 <div class="pagination">
