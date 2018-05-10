@@ -10,33 +10,3 @@ posts.push("{{ post.url }}");
 var url = posts[Math.floor(Math.random()*posts.length)];
 window.location.replace(url);
 </script>
-
-<noscript>
-<div class="pagination">
-  {% if page.previous.url %} 
-    <a class="pagination-item newer" href="{{ page.previous.url | prepend: site.baseurl }}">&deg</a>
-  {% else %}
-    <span class="pagination-item newer">&deg</span>
-  {% endif %}
-</div>
-
-<div class="postsbox">
-<div class="posts">
-  {% for post in paginator.posts %}
-  <div id="content-container">
-  <article class="post">
-    {{ post.content }}
-  </article>
-  </div>
-  {% endfor %}
-</div>
-</div>
-
-<div class="pagination">
-  {% if page.next.url %}
-    <a class="pagination-item older" href="{{ page.next.url | prepend: site.baseurl }}">&deg</a>
-  {% else %}
-    <span class="pagination-item older">&deg</span>
-  {% endif %}
-</div>
-</noscript>
