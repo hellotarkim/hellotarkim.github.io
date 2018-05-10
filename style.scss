@@ -55,21 +55,17 @@ body {
 }
 
 p {
-  margin: 10px 0 15px 0;
+  margin: 10px 0;
 }
 
 a {
-  text-decoration: none;
   color: #0F79D0;
   text-shadow: none;
+  text-decoration: none;
 }
 
 a:hover, a:focus {
   font-weight:bold;
-}
-
-em, cite, strong {
-  font-weight: bold;
 }
 
 blockquote {
@@ -90,7 +86,7 @@ Full-Width Styles
 .inner {
   position: relative;
   max-width: 640px;
-  padding: 20px 10px;
+  padding: 20px 20px;
   margin: 0 auto;
 }
 
