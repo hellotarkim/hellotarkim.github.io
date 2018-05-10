@@ -13,5 +13,6 @@ defaults:
       
 # paginate
 paginate: 2
+paginate_path: /:num/
 gems:
   - jekyll-paginate
