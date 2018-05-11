@@ -4,9 +4,9 @@ layout: default
 
 <div class="pagination">
   {% if paginator.previous_page %}
-    <a class="pagination-item newer" href="{{ paginator.previous_page_path | prepend: site.baseurl }}">&cir;</a>
+    <a class="pagination-item newer" href="{{ paginator.previous_page_path | prepend: site.baseurl }}">&oast;</a>
   {% else %}
-    <span class="pagination-item newer">&cir;</span>
+    <span class="pagination-item newer">&oast;</span>
   {% endif %}
 </div>
 
@@ -20,9 +20,9 @@ layout: default
 
 <div class="pagination">
   {% if paginator.next_page %}
-    <a class="pagination-item older" href="{{ paginator.next_page_path | prepend: site.baseurl }}">&cir;</a>
+    <a class="pagination-item older" href="{{ paginator.next_page_path | prepend: site.baseurl }}">&oast;</a>
   {% else %}
-    <span class="pagination-item older">&cir;</span>
+    <span class="pagination-item older">&oast;</span>
   {% endif %}
 </div>
 
