@@ -32,8 +32,14 @@ layout: default
     $.get(url, function(newdata){
         var newposts = $(newdata).find(".posts");
         var newhref = $(newdata).find(".older").attr("href");
-          $el.attr("href", newhref);
+        if (newhref == null) {
           $(".postsbox").append(newposts);
+          $el.attr("href", null);
+          $el.replaceWith( "<span>" + "-" + "</span>" );
+        } else {
+          $(".postsbox").append(newposts);
+          $el.attr("href", newhref);
+        }  
     });
   });
   
@@ -44,12 +50,13 @@ layout: default
     $.get(url, function(newdata){
       var newposts = $(newdata).find(".posts");
       var newhref = $(newdata).find(".newer").attr("href");
-      if (url == null) {
+      if (newhref == null) {
+        $(".postsbox").prepend(newposts);
         $el.attr("href", null);
         $el.replaceWith( "<span>" + "-" + "</span>" );
       } else {
-        $el.attr("href", newhref);
         $(".postsbox").prepend(newposts);
+        $el.attr("href", newhref);
       }  
     });
   });
