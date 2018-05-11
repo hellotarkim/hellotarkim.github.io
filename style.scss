@@ -44,6 +44,10 @@ table {
 Theme Styles
 *******************************************************************************/
 
+header, footer {
+  display: none;
+}
+
 body {
   box-sizing: border-box;
   color: #333;
@@ -75,6 +79,7 @@ blockquote {
 }
 
 .pagination {
+  margin: 10px 0;
   text-align: center;
 }
 
