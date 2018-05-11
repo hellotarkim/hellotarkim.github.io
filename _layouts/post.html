@@ -32,13 +32,8 @@ layout: default
     $.get(url, function(newdata){
         var newposts = $(newdata).find(".posts");
         var newhref = $(newdata).find(".older").attr("href");
-        if (url == null) {
-            $el.attr("href", null);
-            $el.replaceWith( "<span>" + "-" + "</span>" );
-        } else {
-            $el.attr("href", newhref);
-            $(".postsbox").append(newposts);
-        }    
+          $el.attr("href", newhref);
+          $(".postsbox").append(newposts);
     });
   });
   
