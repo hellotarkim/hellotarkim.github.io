@@ -50,7 +50,7 @@ layout: default
       var newposts = $(newdata).find(".posts");
       var newhref = $el.attr("href");
       var check = $(newdata).find(".newer").attr("href");
-      if (newhref == null) {
+      if (check == null) {
         $el.replaceWith( "<span>" + "-" + "</span>" );
       } else {
         $el.attr("href", newhref);
