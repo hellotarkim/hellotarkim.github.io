@@ -33,7 +33,7 @@ layout: default
         var newposts = $(newdata).find(".posts");
         var newhref = $el.attr("href");
         var check = $(newdata).find(".older").attr("href");
-        if (check == null) {
+        if (check == url) {
             $el.replaceWith( "<span>" + "-" + "</span>" );
         } else {
             $el.attr("href", newhref);
@@ -50,7 +50,7 @@ layout: default
       var newposts = $(newdata).find(".posts");
       var newhref = $el.attr("href");
       var check = $(newdata).find(".newer").attr("href");
-      if (check == null) {
+      if (check == url) {
         $el.replaceWith( "<span>" + "-" + "</span>" );
       } else {
         $el.attr("href", newhref);
