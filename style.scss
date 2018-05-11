@@ -50,44 +50,53 @@ header, footer {
 
 body {
   box-sizing: border-box;
-  color: #333;
   font-size: 16px;
   font-family: 'Nanum Myeongjo', serif;
   line-height: 1.6;
   background: #eee;
-  -webkit-animation: bg 10s infinite alternate;
-  -moz-animation: bg 10s infinite alternate;
-  -o-animation: bg 10s infinite alternate;
-  animation: bg 10s infinite alternate;
+  -webkit-animation: wb 10s infinite alternate;
+  -moz-animation: wb 10s infinite alternate;
+  -o-animation: wb 10s infinite alternate;
+  animation: wb 10s infinite alternate;
+  color: #333;
+  -webkit-animation: bw 10s infinite alternate;
+  -moz-animation: bw 10s infinite alternate;
+  -o-animation: bw 10s infinite alternate;
+  animation: bw 10s infinite alternate;
 }
 
-@-webkit-keyframes bg {
+@-webkit-keyframes wb {
   0%   { background: #eee; }
-  25%   { background: #red; }
-  50%   { background: #green; }
-  75%   { background: #yellow; }
-  100% { background: #fff; }
+  100% { background: #333; }
 }
-@-moz-keyframes bg {
+@-moz-keyframes wb {
   0%   { background: #eee; }
-  25%   { background: #red; }
-  50%   { background: #green; }
-  75%   { background: #yellow; }
-  100% { background: #fff; }
+  100% { background: #333; }
 }
-@-o-keyframes bg {
+@-o-keyframes wb {
   0%   { background: #eee; }
-  25%   { background: #red; }
-  50%   { background: #green; }
-  75%   { background: #yellow; }
-  100% { background: #fff; }
+  100% { background: #333; }
 }
-@keyframes bg {
+@keyframes wb {
   0%   { background: #eee; }
-  25%   { background: #red; }
-  50%   { background: #green; }
-  75%   { background: #yellow; }
-  100% { background: #fff; }
+  100% { background: #333; }
+}
+
+@-webkit-keyframes bw {
+  0%   { background: #333; }
+  100% { background: #eee; }
+}
+@-moz-keyframes bw {
+  0%   { background: #333; }
+  100% { background: #eee; }
+}
+@-o-keyframes bw {
+  0%   { background: #333; }
+  100% { background: #eee; }
+}
+@keyframes bw {
+  0%   { background: #333; }
+  100% { background: #eee; }
 }
 
 p {
