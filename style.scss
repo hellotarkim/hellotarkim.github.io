@@ -51,10 +51,31 @@ header, footer {
 body {
   box-sizing: border-box;
   color: #333;
-  background: #eee;
   font-size: 16px;
   font-family: 'Nanum Myeongjo', serif;
   line-height: 1.6;
+  background: #eee;
+  -webkit-animation: bg 5s infinite alternate;
+  -moz-animation: bg 5s infinite alternate;
+  -o-animation: bg 5s infinite alternate;
+  animation: bg 5s infinite alternate;
+}
+
+@-webkit-keyframes bg {
+  0%   { background: #ccc; }
+  100% { background: #eee; }
+}
+@-moz-keyframes bg {
+  0%   { background: #ccc; }
+  100% { background: #eee; }
+}
+@-o-keyframes bg {
+  0%   { background: #ccc; }
+  100% { background: #eee; }
+}
+@keyframes bg {
+  0%   { background: #ccc; }
+  100% { background: #eee; }
 }
 
 p {
