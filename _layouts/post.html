@@ -31,7 +31,7 @@ layout: default
     var url = $(this).attr("href");    
     $.get(url, function(newdata){
         var newposts = $(newdata).find(".posts");
-        var newhref = $(newdata).attr("href");
+        var newhref = $el.attr("href");
         if (newhref == null) {
             $el.replaceWith( "<span>" + "-" + "</span>" );
         } else {
@@ -47,7 +47,7 @@ layout: default
     var url = $(this).attr("href");    
     $.get(url, function(newdata){
       var newposts = $(newdata).find(".posts");
-      var newhref = $(newdata).attr("href");
+      var newhref = $el.attr("href");
       if (newhref == null) {
         $el.replaceWith( "<span>" + "-" + "</span>" );
       } else {
