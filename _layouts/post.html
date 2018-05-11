@@ -34,7 +34,6 @@ layout: default
         var newhref = $(newdata).find(".older").attr("href");
         if (newhref == null) {
             $el.replaceWith( "<span>" + $el.html() + "</span>" );
-            $(".postsbox").append(newposts);
         } else {
             $el.attr("href", newhref);
             $(".postsbox").append(newposts);
@@ -51,7 +50,6 @@ layout: default
       var newhref = $(newdata).find(".newer").attr("href");
       if (newhref == null) {
         $el.replaceWith( "<span>" + $el.html() + "</span>" );
-        $(".postsbox").prepend(newposts);
       } else {
         $el.attr("href", newhref);
         $(".postsbox").prepend(newposts);
