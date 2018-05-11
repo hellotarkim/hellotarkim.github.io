@@ -55,44 +55,27 @@ body {
   line-height: 1.6;
   background: #eee;
   color: #333;
-  -webkit-animation: wb, bw 10s infinite alternate;
-  -moz-animation: wb, bw 10s infinite alternate;
-  -o-animation: wb, bw 10s infinite alternate;
-  animation: wb, bw 10s infinite alternate;
-}
-
-@-webkit-keyframes wb {
-  0%   { background: #eee; }
-  100% { background: #333; }
-}
-@-moz-keyframes wb {
-  0%   { background: #eee; }
-  100% { background: #333; }
-}
-@-o-keyframes wb {
-  0%   { background: #eee; }
-  100% { background: #333; }
-}
-@keyframes wb {
-  0%   { background: #eee; }
-  100% { background: #333; }
+  -webkit-animation: bw 10s infinite alternate;
+  -moz-animation: bw 10s infinite alternate;
+  -o-animation: bw 10s infinite alternate;
+  animation: bw 10s infinite alternate;
 }
 
 @-webkit-keyframes bw {
-  0%   { background: #333; }
-  100% { background: #eee; }
+  0%   { background: #eee; color: #333; }
+  100% { background: #333; color: #eee; }
 }
 @-moz-keyframes bw {
-  0%   { background: #333; }
-  100% { background: #eee; }
+  0%   { background: #eee; color: #333; }
+  100% { background: #333; color: #eee; }
 }
 @-o-keyframes bw {
-  0%   { background: #333; }
-  100% { background: #eee; }
+  0%   { background: #eee; color: #333; }
+  100% { background: #333; color: #eee; }
 }
 @keyframes bw {
-  0%   { background: #333; }
-  100% { background: #eee; }
+  0%   { background: #eee; color: #333; }
+  100% { background: #333; color: #eee; }
 }
 
 p {
