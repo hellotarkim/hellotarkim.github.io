@@ -55,10 +55,10 @@ body {
   font-family: 'Nanum Myeongjo', serif;
   line-height: 1.6;
   background: #eee;
-  -webkit-animation: bg 3s infinite alternate;
-  -moz-animation: bg 3s infinite alternate;
-  -o-animation: bg 3s infinite alternate;
-  animation: bg 3s infinite alternate;
+  -webkit-animation: bg 10s infinite alternate;
+  -moz-animation: bg 10s infinite alternate;
+  -o-animation: bg 10s infinite alternate;
+  animation: bg 10s infinite alternate;
 }
 
 @-webkit-keyframes bg {
