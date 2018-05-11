@@ -63,18 +63,30 @@ body {
 
 @-webkit-keyframes bg {
   0%   { background: #eee; }
+  25%   { background: #red; }
+  50%   { background: #green; }
+  75%   { background: #yellow; }
   100% { background: #fff; }
 }
 @-moz-keyframes bg {
   0%   { background: #eee; }
+  25%   { background: #red; }
+  50%   { background: #green; }
+  75%   { background: #yellow; }
   100% { background: #fff; }
 }
 @-o-keyframes bg {
   0%   { background: #eee; }
+  25%   { background: #red; }
+  50%   { background: #green; }
+  75%   { background: #yellow; }
   100% { background: #fff; }
 }
 @keyframes bg {
   0%   { background: #eee; }
+  25%   { background: #red; }
+  50%   { background: #green; }
+  75%   { background: #yellow; }
   100% { background: #fff; }
 }
 
