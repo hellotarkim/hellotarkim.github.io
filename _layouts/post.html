@@ -25,7 +25,7 @@ layout: default
 </div>
 
 <script>
-  $('.older').click(function(e) {
+  $('a.older').click(function(e) {
     e.preventDefault();
     var $el = $(this);
     var url = $(this).attr("href");    
@@ -43,7 +43,7 @@ layout: default
     });
   });
   
-  $('.newer').click(function(e) {
+  $('a.newer').click(function(e) {
     e.preventDefault();
     var $el = $(this);
     var url = $(this).attr("href");    
