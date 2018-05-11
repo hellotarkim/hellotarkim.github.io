@@ -62,20 +62,20 @@ body {
 }
 
 @-webkit-keyframes bw {
-  0%   { background: #eee; color: #333; }
-  100% { background: #333; color: #eee; }
+  0%   { background: #eee; color: #fff; }
+  100% { background: #fff; color: #eee; }
 }
 @-moz-keyframes bw {
-  0%   { background: #eee; color: #333; }
-  100% { background: #333; color: #eee; }
+  0%   { background: #eee; color: #fff; }
+  100% { background: #fff; color: #eee; }
 }
 @-o-keyframes bw {
-  0%   { background: #eee; color: #333; }
-  100% { background: #333; color: #eee; }
+  0%   { background: #eee; color: #fff; }
+  100% { background: #fff; color: #eee; }
 }
 @keyframes bw {
-  0%   { background: #eee; color: #333; }
-  100% { background: #333; color: #eee; }
+  0%   { background: #eee; color: #fff; }
+  100% { background: #fff; color: #eee; }
 }
 
 p {
