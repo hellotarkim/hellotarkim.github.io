@@ -9,7 +9,7 @@ defaults:
     values:
       layout: "post" # layout 기본값을 post로 지정
       author: "Tar Kim"
-      permalink: /:title # permalink 형식 지정
+      permalink: /:none # permalink 형식 지정
       
 # paginate
 paginate: 1
