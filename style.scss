@@ -55,27 +55,6 @@ body {
   line-height: 1.6;
   background: #eee;
   color: #333;
-  -webkit-animation: bw 10s infinite alternate;
-  -moz-animation: bw 10s infinite alternate;
-  -o-animation: bw 10s infinite alternate;
-  animation: bw 10s infinite alternate;
-}
-
-@-webkit-keyframes bw {
-  0%   { background: #eee; color: #333; }
-  100% { background: #fff; color: #000; }
-}
-@-moz-keyframes bw {
-  0%   { background: #eee; color: #333; }
-  100% { background: #fff; color: #000; }
-}
-@-o-keyframes bw {
-  0%   { background: #eee; color: #333; }
-  100% { background: #fff; color: #000; }
-}
-@keyframes bw {
-  0%   { background: #eee; color: #333; }
-  100% { background: #fff; color: #000; }
 }
 
 p {
@@ -101,6 +80,11 @@ blockquote {
 .pagination {
   margin: 10px 0;
   text-align: center;
+}
+
+::selection {
+    color: #eee; 
+    background: #333;
 }
 
 /*******************************************************************************
