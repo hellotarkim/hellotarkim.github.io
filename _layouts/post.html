@@ -37,7 +37,7 @@ layout: default
           $el.attr("href", null);
           $el.replaceWith( "<span>" + "-" + "</span>" );
         } else {
-          $(".postsbox").fadeIn().append(newposts);
+          $(".postsbox").append(newposts);
           $el.attr("href", newhref);
         }  
     });
@@ -55,7 +55,7 @@ layout: default
         $el.attr("href", null);
         $el.replaceWith( "<span>" + "-" + "</span>" );
       } else {
-        $(".postsbox").fadeIn().prepend(newposts);
+        $(".postsbox").prepend(newposts);
         $el.attr("href", newhref);
       }  
     });
