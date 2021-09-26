@@ -3,12 +3,6 @@ title: Tar Kim
 description: Travel Around The World
 
 # defaults
-defaults:
-  - scope:
-      path: "_posts" # 적용 할 폴더 지정
-    values:
-      author: "Tar Kim"
-      permalink: /:title/ # permalink 형식 지정
       
 # paginate
 paginate: 1
