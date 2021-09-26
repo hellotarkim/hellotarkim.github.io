@@ -11,15 +11,6 @@
     <link rel="stylesheet" type="text/css" media="screen" href="{{ '/style.css?v=' | append: site.github.build_revision | relative_url }}">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     {% seo %}
-    
-    <script>
-var posts = [];
-{% for post in site.posts %}
-posts.push("{{ post.url }}");
-{% endfor %}
-var url = posts[Math.floor(Math.random()*posts.length)];
-window.location.replace(url);
-</script>
   </head>
 
   <body>
