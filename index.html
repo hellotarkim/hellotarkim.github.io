@@ -3,6 +3,9 @@ layout: default
 ---
 
 <script>
+  
+window.onload = function () {
+
 var posts = [];
 {% for post in paginator.posts %}
 posts.push("{{ post.url }}");
@@ -11,4 +14,7 @@ posts.push("{{ post.url }}");
 var url = posts[Math.floor(Math.random()*posts.length)];
 
 window.location.replace(url);
+ 
+};
+
 </script>
