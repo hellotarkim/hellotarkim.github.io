@@ -8,6 +8,7 @@ defaults:
       path: "_posts" # 적용 할 폴더 지정
     values:
       # layout: "post" # layout 기본값을 post로 지정
+      layouts_dir: . # layout 폴더 경로를 루트로 
       author: "Tar Kim"
       permalink: /:title/ # permalink 형식 지정
       
