@@ -3,8 +3,8 @@ layout: default
 ---
 
 <div class="pagination">
-  {% if page.previous.url %} 
-    <a class="pagination-item newer" href="{{ page.previous.url | prepend: site.baseurl }}">+</a>
+  {% if page.previous.url %}
+    <a class="pagination-item newer" href="{{ paginator.previous_page_path | prepend: site.baseurl }}">+</a>
   {% else %}
     <span class="pagination-item newer">-</span>
   {% endif %}
@@ -18,7 +18,7 @@ layout: default
 
 <div class="pagination">
   {% if page.next.url %}
-    <a class="pagination-item older" href="{{ page.next.url | prepend: site.baseurl }}">+</a>
+    <a class="pagination-item older" href="{{ paginator.next_page_path | prepend: site.baseurl }}">+</a>
   {% else %}
     <span class="pagination-item older">-</span>
   {% endif %}
@@ -28,7 +28,7 @@ layout: default
   $('a.older').click(function(e) {
     e.preventDefault();
     var $el = $(this);
-    var url = $(this).attr("href");    
+    var url = $(this).attr("href");
     $.get(url, function(newdata){
         var newposts = $(newdata).find(".posts");
         var newhref = $(newdata).find(".older").attr("href");
@@ -39,14 +39,14 @@ layout: default
         } else {
           $(".postsbox").append(newposts);
           $el.attr("href", newhref);
-        }  
+        }
     });
   });
-  
+
   $('a.newer').click(function(e) {
     e.preventDefault();
     var $el = $(this);
-    var url = $(this).attr("href");    
+    var url = $(this).attr("href");
     $.get(url, function(newdata){
       var newposts = $(newdata).find(".posts");
       var newhref = $(newdata).find(".newer").attr("href");
@@ -57,7 +57,7 @@ layout: default
       } else {
         $(".postsbox").prepend(newposts);
         $el.attr("href", newhref);
-      }  
+      }
     });
   });
 </script>
