@@ -38,8 +38,8 @@
 
           <div class="postsbox">
             <div class="posts">
-              {% for post in paginator.posts %}
-                {{ post.content }}
+              {% for post in site.posts %}
+                  {{ post.content }}
               {% endfor %}
             </div>
           </div>
