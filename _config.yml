@@ -1,11 +1,9 @@
 # Setup
-title: Tar Kim
-description: Travel Around The World
-
-# defaults
+title: Tar
+description: travel around
       
 # paginate
 paginate: 1
-paginate_path: /list:num/
+paginate_path: /:num
 gems:
   - jekyll-paginate
