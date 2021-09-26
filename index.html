@@ -30,7 +30,45 @@ layout: default
 var posts = [];
 {% for post in site.posts %}
 posts.push("{{ post.url }}");
-{% endfor %}	 
+{% endfor %}
 var url = posts[Math.floor(Math.random()*posts.length)];
 window.location.replace(url);
+</script>
+
+<script>
+  $('a.older').click(function(e) {
+    e.preventDefault();
+    var $el = $(this);
+    var url = $(this).attr("href");
+    $.get(url, function(newdata){
+        var newposts = $(newdata).find(".posts");
+        var newhref = $(newdata).find(".older").attr("href");
+        if (newhref == null) {
+          $(".postsbox").append(newposts);
+          $el.attr("href", null);
+          $el.replaceWith( "<span>" + "-" + "</span>" );
+        } else {
+          $(".postsbox").append(newposts);
+          $el.attr("href", newhref);
+        }
+    });
+  });
+
+  $('a.newer').click(function(e) {
+    e.preventDefault();
+    var $el = $(this);
+    var url = $(this).attr("href");
+    $.get(url, function(newdata){
+      var newposts = $(newdata).find(".posts");
+      var newhref = $(newdata).find(".newer").attr("href");
+      if (newhref == null) {
+        $(".postsbox").prepend(newposts);
+        $el.attr("href", null);
+        $el.replaceWith( "<span>" + "-" + "</span>" );
+      } else {
+        $(".postsbox").prepend(newposts);
+        $el.attr("href", newhref);
+      }
+    });
+  });
 </script>
