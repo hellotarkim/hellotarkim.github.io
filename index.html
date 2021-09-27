@@ -4,25 +4,9 @@ author: tar
 ---
 <h1>index</h1>
 
-<div class="pagination">
-  {% if page.previous.url %} 
-    <a class="pagination-item newer" href="{{ page.previous.url | prepend: site.baseurl }}">+</a>
-  {% else %}
-    <span class="pagination-item newer">-</span>
-  {% endif %}
-</div>
-
 <div class="postsbox">
    <a href="{{ page.url | prepend: site.baseurl }}">포스트콘텐트 {{ post.content }} </a>
    <a href="{{ post.url | prepend: site.baseurl }}"> 콘텐트 {{ content }} </a>
-</div>
-
-<div class="pagination">
-  {% if page.next.url %}
-    <a class="pagination-item older" href="{{ page.next.url | prepend: site.baseurl }}">+</a>
-  {% else %}
-    <span class="pagination-item older">-</span>
-  {% endif %}
 </div>
 
 <!--
