@@ -4,6 +4,6 @@ description: travel around
       
 # paginate
 paginate: 1
-paginate_path: /:num
+paginate_path: /Page:num
 gems:
   - jekyll-paginate
