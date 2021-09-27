@@ -38,7 +38,7 @@ author: tar
           $el.attr("href", null);
           $el.replaceWith( "<span>" + "-" + "</span>" );
         } else {
-          $(".postsbox").animate({scrollTop:$(this.hash).offset().top}, 1000).append(newposts);
+          $(".postsbox").css("opacity",0).animate({opacity:1},1000).append(newposts);
           $el.attr("href", newhref);
         }  
     });
