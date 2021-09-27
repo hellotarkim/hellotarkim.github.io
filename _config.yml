@@ -2,6 +2,8 @@
 title: Tar
 description: travel around
       
+permalink: /:title/ # permalink 형식 지정
+
 # paginate
 paginate: 1
 paginate_path: /page:num
