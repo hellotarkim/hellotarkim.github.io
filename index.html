@@ -6,7 +6,7 @@ author: tar
 <script>
   function linkToRandomBlogPost() {
     var allPosts = [
-        {% for post in site.posts %}
+        {% for post in paginator.posts %}
         "{{ post.url | prepend: site.baseurl }}"{% unless forloop.last %},{% endunless %}
         {% endfor %}
     ]; //-- 1
