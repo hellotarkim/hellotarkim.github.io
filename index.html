@@ -19,7 +19,7 @@ author: tar
 <div class="postsbox">
   <div class="posts">
     {% for post in site.posts limit:1 %}
-      <a href="{{ post.url | prepend: site.baseurl }}">{{ post.content }}</a>
+      <a href="{{ post.url | prepend: site.baseurl }}">{{ content }}</a>
     {% endfor %}
   </div>
 </div>
