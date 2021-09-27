@@ -2,7 +2,7 @@
 title: Tar
 description: travel around
 
-permalink: /page:num
+permalink: /:title
 
 # paginate
 paginate: 1
