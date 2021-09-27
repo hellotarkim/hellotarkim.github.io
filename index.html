@@ -3,16 +3,15 @@ layout: default
 author: tar
 ---
 
+    {% for post in paginator.posts %}
+      {{ post.content }}
+    {% endfor %}
+
 <script>
-  function linkToRandomBlogPost() {
-    var allPosts = [
-        {% for post in paginator.posts %}
-        "{{ post.url | prepend: site.baseurl }}"{% unless forloop.last %},{% endunless %}
-        {% endfor %}
-    ]; //-- 1
-
-    return allPosts[Math.floor(Math.random() * allPosts.length)]; //-- 2
-  }
-
-  location.replace(linkToRandomBlogPost()) //-- 3
+var posts = [];
+{% for post in site.posts %}
+posts.push("{{ post.url }}");
+{% endfor %}	 
+var url = posts[Math.floor(Math.random()*posts.length)];
+window.location.replace(url);
 </script>
