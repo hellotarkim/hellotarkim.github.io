@@ -6,3 +6,27 @@ author: tar
     {% for post in paginator.posts %}
       {{ post.content }}
     {% endfor %}
+
+
+<h1>old post</h1>
+<div class="pagination">
+  {% if page.previous.url %} 
+    <a class="pagination-item newer" href="{{ page.previous.url | prepend: site.baseurl }}">+</a>
+  {% else %}
+    <span class="pagination-item newer">-</span>
+  {% endif %}
+</div>
+
+<div class="postsbox">
+  <div class="posts">
+    {{ content }}
+  </div>
+</div>
+
+<div class="pagination">
+  {% if page.next.url %}
+    <a class="pagination-item older" href="{{ page.next.url | prepend: site.baseurl }}">+</a>
+  {% else %}
+    <span class="pagination-item older">-</span>
+  {% endif %}
+</div>
