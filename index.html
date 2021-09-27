@@ -9,8 +9,8 @@ author: tar
 -->
 
 <div class="pagination">
-  {% if post.previous.url %} 
-    <a class="pagination-item newer" href="{{ post.previous.url | prepend: site.baseurl }}">+</a>
+  {% if page.previous.url %} 
+    <a class="pagination-item newer" href="{{ page.previous.url | prepend: site.baseurl }}">+</a>
   {% else %}
     <span class="pagination-item newer">-</span>
   {% endif %}
@@ -25,8 +25,8 @@ author: tar
 </div>
 
 <div class="pagination">
-  {% if post.next.url %}
-    <a class="pagination-item older" href="{{ post.next.url | prepend: site.baseurl }}">+</a>
+  {% if page.next.url %}
+    <a class="pagination-item older" href="{{ page.next.url | prepend: site.baseurl }}">+</a>
   {% else %}
     <span class="pagination-item older">-</span>
   {% endif %}
