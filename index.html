@@ -2,18 +2,11 @@
 layout: default
 author: tar
 ---
+
 <h1>index</h1>
 
-<!--
-리다이렉트 안될 경우
--->
+{{ content }}
 
-<h3>
-content {{ content }}
-</h3>
-
-
-<!--
 <script>
 var posts = [];
 {% for post in site.posts %}
@@ -22,4 +15,3 @@ posts.push("{{ post.url }}");
 var url = posts[Math.floor(Math.random()*posts.length)];
 window.location.replace(url);
 </script>
--->
