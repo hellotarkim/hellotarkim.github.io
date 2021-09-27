@@ -1,11 +1,4 @@
 # Setup
 title: Tar
 description: travel around
-
 permalink: /:title
-
-# paginate
-#paginate: 1
-#paginate_path: /page:num
-#gems:
-  - jekyll-paginate
