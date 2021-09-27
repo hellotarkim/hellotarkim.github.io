@@ -5,6 +5,9 @@ author: tar
 <h1>index</h1>
 
 <!--
+리다이렉트 안될 경우
+-->
+<!--
 <div class="pagination">
   {% if paginator.previous_page %}
     <a class="pagination-item newer" href="{{ paginator.previous_page_path | prepend: site.baseurl }}">+</a>
@@ -30,6 +33,7 @@ author: tar
 </div>
 -->
 
+<!--
 <script>
 var posts = [];
 {% for post in site.posts %}
@@ -38,3 +42,4 @@ posts.push("{{ post.url }}");
 var url = posts[Math.floor(Math.random()*posts.length)];
 window.location.replace(url);
 </script>
+-->
