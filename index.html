@@ -13,9 +13,8 @@ author: tar
 </div>
 
 <div class="postsbox">
-    {% for post in paginator.posts %}
-      {{ post.content }}
-    {% endfor %}
+   <a href="{{ page.url | prepend: site.baseurl }}">포스트콘텐트 {{ post.content }} </a>
+   <a href="{{ post.url | prepend: site.baseurl }}"> 콘텐트 {{ content }} </a>
 </div>
 
 <div class="pagination">
