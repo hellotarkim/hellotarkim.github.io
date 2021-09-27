@@ -9,8 +9,8 @@ author: tar
 -->
 
 <div class="pagination">
-  {% if paginator.previous_page %}
-    <a class="pagination-item newer" href="{{ paginator.previous_page_path | prepend: site.baseurl }}">+</a>
+  {% if page.previous.url %} 
+    <a class="pagination-item newer" href="{{ page.previous.url | prepend: site.baseurl }}">+</a>
   {% else %}
     <span class="pagination-item newer">-</span>
   {% endif %}
@@ -18,18 +18,10 @@ author: tar
 
 <div class="postsbox">
   <div class="posts">
-    {% for post in paginator.posts %}
+    {% for post in site.posts %}
       {{ post.content }}
     {% endfor %}
   </div>
-</div>
-
-<div class="pagination">
-  {% if paginator.next_page %}
-    <a class="pagination-item older" href="{{ paginator.next_page_path | prepend: site.baseurl }}">+</a>
-  {% else %}
-    <span class="pagination-item older">-</span>
-  {% endif %}
 </div>
 
 <div class="pagination">
