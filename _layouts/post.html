@@ -38,7 +38,7 @@ author: tar
           $el.attr("href", null);
           $el.replaceWith( "<span>" + "-" + "</span>" );
         } else {
-          $(".postsbox").animate({scrollTop:$(this.hash).offset().top}, 500).append(newposts);
+          $(".postsbox").animate({scrollTop:$(this.hash).offset().top}, 1000).append(newposts);
           $el.attr("href", newhref);
         }  
     });
@@ -56,7 +56,7 @@ author: tar
         $el.attr("href", null);
         $el.replaceWith( "<span>" + "-" + "</span>" );
       } else {
-        $(".postsbox").css("opacity",0).animate({opacity:1},100).prepend(newposts);
+        $(".postsbox").css("opacity",0).animate({opacity:1},1000).prepend(newposts);
         $el.attr("href", newhref);
       }  
     });
