@@ -18,8 +18,8 @@ author: tar
 
 <div class="postsbox">
   <div class="posts">
-    {% for post in site.posts %}
-      {{ post.content | sample: 1 }}
+    {% for post in site.posts limit:1 %}
+      {{ post.content }}
     {% endfor %}
   </div>
 </div>
