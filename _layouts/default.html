@@ -27,32 +27,16 @@
         <section id="main_content" class="inner">
 
 
-
-          <div class="pagination">
-            {% if paginator.previous_page %}
-              <a class="pagination-item newer" href="{{ paginator.previous_page_path | prepend: site.baseurl }}">+</a>
-            {% else %}
-              <span class="pagination-item newer">-</span>
-            {% endif %}
-          </div>
-
-          <div class="postsbox">
-            <div class="posts">
               
               {{ content }}
 
-            </div>
-          </div>
-
-          <div class="pagination">
-            {% if paginator.next_page %}
-              <a class="pagination-item older" href="{{ paginator.next_page_path | prepend: site.baseurl }}">+</a>
-            {% else %}
-              <span class="pagination-item older">-</span>
-            {% endif %}
-          </div>
-
-          <script>
+          
+          
+        </section>
+      </div>
+    </div>
+    
+              <script>
             $('a.older').click(function(e) {
               e.preventDefault();
               var $el = $(this);
@@ -89,12 +73,6 @@
               });
             });
           </script>
-
-
-
-        </section>
-      </div>
-    </div>
 
     <!-- FOOTER  -->
     <div id="footer_wrap" class="outer">
