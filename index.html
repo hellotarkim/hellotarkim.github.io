@@ -19,7 +19,7 @@ author: tar
 <div class="postsbox">
   <div class="posts">
     {% for post in site.posts %}
-      {{ post.content | last }}
+      {{ post.content | sample: 1 }}
     {% endfor %}
   </div>
 </div>
