@@ -26,7 +26,7 @@ author: tar
 
 <div class="pagination">
   {% if page.next.url %}
-    <a class="pagination-item older" href="{{ page.next.url | prepend: site.baseurl }}">+</a>
+    <a class="pagination-item older" href="{{ post.next.url | prepend: site.baseurl }}">+</a>
   {% else %}
     <span class="pagination-item older">-</span>
   {% endif %}
