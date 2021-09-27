@@ -3,14 +3,12 @@ layout: default
 author: tar
 ---
 
-<h1>index</h1>
-
 {{ content }}
 
 <script>
 var posts = [];
 {% for post in site.posts %}
-posts.push("{{ post.url }}");
+  posts.push("{{ post.url }}");
 {% endfor %}	 
 var url = posts[Math.floor(Math.random()*posts.length)];
 window.location.replace(url);
