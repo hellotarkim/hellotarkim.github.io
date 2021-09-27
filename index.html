@@ -11,7 +11,7 @@ author: tar
 <script>
 var posts = [];
 {% for post in site.posts %}
-posts.push("{{ paginate_path }}");
+posts.push("{{ paginator.page }}");
 {% endfor %}	 
 var url = posts[Math.floor(Math.random()*posts.length)];
 window.location.replace(url);
