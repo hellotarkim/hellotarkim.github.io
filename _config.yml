@@ -1,8 +1,6 @@
 # Setup
 title: Tar
 description: travel around
-      
-permalink: /:title/ # permalink 형식 지정
 
 # paginate
 paginate: 1
