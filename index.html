@@ -13,9 +13,9 @@ author: tar
 </div>
 
 <div class="postsbox">
-  <div class="posts">
-    {{ content }}
-  </div>
+    {% for post in paginator.posts %}
+      {{ post.content }}
+    {% endfor %}
 </div>
 
 <div class="pagination">
