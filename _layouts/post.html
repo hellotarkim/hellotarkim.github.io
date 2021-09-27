@@ -38,7 +38,7 @@ author: tar
           $el.attr("href", null);
           $el.replaceWith( "<span>" + "-" + "</span>" );
         } else {
-          $(".postsbox").slideDown().append(newposts);
+          $(".postsbox").hide().append(newposts).fadeIn("slow");
           $el.attr("href", newhref);
         }  
     });
@@ -56,7 +56,7 @@ author: tar
         $el.attr("href", null);
         $el.replaceWith( "<span>" + "-" + "</span>" );
       } else {
-        $(".postsbox").slideDown().prepend(newposts);
+        $(".postsbox").hide().prepend(newposts).fadeIn("slow");
         $el.attr("href", newhref);
       }  
     });
