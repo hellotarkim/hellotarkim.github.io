@@ -2,6 +2,3 @@
 title: Tar
 description: travel around
 permalink: /:title
-
-plugins:
-  - jekyll-admin
