@@ -1,17 +1,39 @@
 ---
-layout: post
+layout: default
 author: tar
 ---
 <h1>index</h1>
 
 
-<!--
+<div class="pagination">
+  {% if paginator.previous_page %}
+    <a class="pagination-item newer" href="{{ paginator.previous_page_path | prepend: site.baseurl }}">+</a>
+  {% else %}
+    <span class="pagination-item newer">-</span>
+  {% endif %}
+</div>
+
+<div class="postsbox">
+  <div class="posts">
+    {% for post in paginator.posts %}
+      {{ post.content }}
+    {% endfor %}
+  </div>
+</div>
+
+<div class="pagination">
+  {% if paginator.next_page %}
+    <a class="pagination-item older" href="{{ paginator.next_page_path | prepend: site.baseurl }}">+</a>
+  {% else %}
+    <span class="pagination-item older">-</span>
+  {% endif %}
+</div>
+
 <script>
 var posts = [];
 {% for post in site.posts %}
-posts.push("{{  }}");
+posts.push("{{ post.url }}");
 {% endfor %}	 
 var url = posts[Math.floor(Math.random()*posts.length)];
 window.location.replace(url);
 </script>
--->
